@@ -1,0 +1,15 @@
+module-name:
+    collections_api
+
+module-description:
+    Collections API service
+
+service-language:
+    python
+
+module-version:
+    0.0.1
+
+owners:
+    [scanon, dlyon]
+
