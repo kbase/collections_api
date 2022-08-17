@@ -33,7 +33,6 @@ class collections_api:
     # be found
     def __init__(self, config):
         #BEGIN_CONSTRUCTOR
-        self.callback_url = os.environ['SDK_CALLBACK_URL']
         self.shared_folder = config['scratch']
         logging.basicConfig(format='%(created)s %(levelname)s: %(message)s',
                             level=logging.INFO)
