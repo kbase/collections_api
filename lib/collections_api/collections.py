@@ -12,5 +12,5 @@ class Collections():
     def list_collections(self):
         return [self.gtdb]
     
-    def get_collection(self, collection):
-        return self.gtdb 
+    def get_collection(self, collection_id):
+        return self.gtdb

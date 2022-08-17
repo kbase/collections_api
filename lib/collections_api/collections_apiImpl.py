@@ -23,8 +23,8 @@ class collections_api:
     # the latter method is running.
     ######################################### noqa
     VERSION = "0.0.1"
-    GIT_URL = "https://github.com/kbase/collections_api"
-    GIT_COMMIT_HASH = "9d3d7db9a480ed41524ccc8e1092cc8110985c0a"
+    GIT_URL = "git@github.com:kbase/collections_api.git"
+    GIT_COMMIT_HASH = "59b518809b3dc2c1bfe5861aaa5c8351f169df34"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -43,8 +43,8 @@ class collections_api:
 
     def list_collections(self, ctx):
         """
-        This example function accepts any number of parameters and returns results in a KBaseReport
-        :returns: instance of unspecified object
+        :returns: instance of type "ListCollectionsResults" -> list of type
+           "collection" -> unspecified object
         """
         # ctx is the context object
         # return variables are: output
@@ -53,27 +53,29 @@ class collections_api:
         #END list_collections
 
         # At some point might do deeper type checking...
-        if not isinstance(output, object):
+        if not isinstance(output, list):
             raise ValueError('Method list_collections return value ' +
-                             'output is not type object as required.')
+                             'output is not type list as required.')
         # return the results
         return [output]
 
-    def get_collection(self, ctx, collection):
+    def get_collection(self, ctx, params):
         """
-        :param collection: instance of String
-        :returns: instance of mapping from String to unspecified object
+        :param params: instance of type "GetCollectionParams" -> structure:
+           parameter "collection_id" of String
+        :returns: instance of type "GetCollectionResults" -> type
+           "collection" -> unspecified object
         """
         # ctx is the context object
         # return variables are: output
         #BEGIN get_collection
-        output = self.collections.get_collection(collection)
+        output = self.collections.get_collection(params.collection_id)
         #END get_collection
 
         # At some point might do deeper type checking...
-        if not isinstance(output, dict):
+        if not isinstance(output, object):
             raise ValueError('Method get_collection return value ' +
-                             'output is not type dict as required.')
+                             'output is not type object as required.')
         # return the results
         return [output]
     def status(self, ctx):

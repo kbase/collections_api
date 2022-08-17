@@ -344,7 +344,7 @@ class Application(object):
         self.method_authentication['collections_api.list_collections'] = 'required'  # noqa
         self.rpc_service.add(impl_collections_api.get_collection,
                              name='collections_api.get_collection',
-                             types=[str])
+                             types=[dict])
         self.method_authentication['collections_api.get_collection'] = 'required'  # noqa
         self.rpc_service.add(impl_collections_api.status,
                              name='collections_api.status',

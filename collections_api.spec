@@ -3,11 +3,18 @@ A KBase module: collections_api
 */
 
 module collections_api {
+    
+    typedef UnspecifiedObject collection;
 
-    /*
-        This example function accepts any number of parameters and returns results in a KBaseReport
-    */
-    funcdef list_collections() returns (UnspecifiedObject output) authentication required;
+    typedef list<collection> ListCollectionsResults;
 
-    funcdef get_collection(string collection) returns (mapping<string,UnspecifiedObject> output) authentication required;
+    funcdef list_collections() returns (ListCollectionsResults output) authentication required;
+
+    typedef structure {
+        string collection_id;
+    } GetCollectionParams;
+
+    typedef collection GetCollectionResults;
+
+    funcdef get_collection(GetCollectionParams params) returns (GetCollectionResults output) authentication required;
 };
