@@ -69,7 +69,7 @@ class collections_api:
         # ctx is the context object
         # return variables are: output
         #BEGIN get_collection
-        output = self.collections.get_collection(params.collection_id)
+        output = self.collections.get_collection(params.get('collection_id'))
         #END get_collection
 
         # At some point might do deeper type checking...
