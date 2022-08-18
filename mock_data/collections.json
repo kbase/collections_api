@@ -1,0 +1,112 @@
+[{
+  "name": "GTDB",
+  "id":"gtdb",
+  "latest": "1.0",
+  "doi": "10.1109/5.771073",
+  "description": "GTDB taxonomy collection.",
+  "organizations": [
+    "KBase"
+  ],
+  "icon": "https://kbase.us/assets/icons/GTDB",
+  "narratives": [
+    "111607",
+    "11907"
+  ],
+  "modules": [
+    "PhylogeneticHistogram",
+    "PhylogeneticTree",
+    "TraitsDram"
+  ],
+  "connectors": [
+    "TaxonomicOntology",
+    "GenomeSimilarity",
+    "Ontological"
+  ],
+  "contributors": [
+    {
+      "last_name": "Smith",
+      "first_name": "Alice",
+      "institution": "University College",
+      "role": "Principal Investigator"
+    }
+  ],
+  "versions": {
+    "1.0": {
+      "relese_date": "2020-05-07T14:19:09.522"
+    }
+  }
+},{
+  "name": "GTDB2",
+  "id":"gtdb2",
+  "latest": "1.0",
+  "doi": "10.1109/5.771073",
+  "description": "GTDB taxonomy collection.",
+  "organizations": [
+    "KBase"
+  ],
+  "icon": "https://kbase.us/assets/icons/GTDB",
+  "narratives": [
+    "111607",
+    "11907"
+  ],
+  "modules": [
+    "PhylogeneticHistogram",
+    "PhylogeneticTree",
+    "TraitsDram"
+  ],
+  "connectors": [
+    "TaxonomicOntology",
+    "GenomeSimilarity",
+    "Ontological"
+  ],
+  "contributors": [
+    {
+      "last_name": "Smith",
+      "first_name": "Alice",
+      "institution": "University College",
+      "role": "Principal Investigator"
+    }
+  ],
+  "versions": {
+    "1.0": {
+      "relese_date": "2020-05-07T14:19:09.522"
+    }
+  }
+},{
+  "name": "GTDB3",
+  "id":"gtdb3",
+  "latest": "1.0",
+  "doi": "10.1109/5.771073",
+  "description": "GTDB taxonomy collection.",
+  "organizations": [
+    "KBase"
+  ],
+  "icon": "https://kbase.us/assets/icons/GTDB",
+  "narratives": [
+    "111607",
+    "11907"
+  ],
+  "modules": [
+    "PhylogeneticHistogram",
+    "PhylogeneticTree",
+    "TraitsDram"
+  ],
+  "connectors": [
+    "TaxonomicOntology",
+    "GenomeSimilarity",
+    "Ontological"
+  ],
+  "contributors": [
+    {
+      "last_name": "Smith",
+      "first_name": "Alice",
+      "institution": "University College",
+      "role": "Principal Investigator"
+    }
+  ],
+  "versions": {
+    "1.0": {
+      "relese_date": "2020-05-07T14:19:09.522"
+    }
+  }
+}]

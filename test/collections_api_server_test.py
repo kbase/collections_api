@@ -45,9 +45,15 @@ class collections_apiTest(unittest.TestCase):
         pass
 
     # NOTE: According to Python unittest naming rules test method names should start from 'test'. # noqa
-    def test_methods(self):
+    def test_list_collections(self):
         ret = self.serviceImpl.list_collections(self.ctx)
-        print(ret)
-        ret = self.serviceImpl.get_collection(self.ctx, "gtdb")
-        print(ret)
-
+    
+    def test_get_collection(self):
+        ret = self.serviceImpl.get_collection(self.ctx, {'collection_id':"gtdb"})
+        collection = ret[0]
+        assert collection.get('id') == 'gtdb'
+    
+    def test_get_collection_bad_id(self):
+        with self.assertRaises(ValueError) as context:
+            self.serviceImpl.get_collection(self.ctx, {'collection_id':"bad_id"})
+        assert 'No collection exists with id "bad_id"' in str(context.exception)
